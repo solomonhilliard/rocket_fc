@@ -3,7 +3,8 @@ target = "riscv32imc-esp-espidf"
 
 [target.riscv32imc-esp-espidf]
 linker = "ldproxy"
-runner = "espflash flash --monitor"
+# sudo may not be neccisary depending on system configuration
+runner = "sudo espflash flash --monitor"
 rustflags = [ "--cfg",  "espidf_time64"]
 
 [unstable]
